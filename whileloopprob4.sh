@@ -1,10 +1,9 @@
 #!/bin/bash -x
 initial_amount=100
-final_amount=200
 win=0
 lose=0
 read -p "Enter a monetary value:" x
-while [ $initial_amount ]
+while [ $final_amount -gt 0 && $final_amount -lt 200 ]
 do
 if (( $initial_amount -ge $x && $x-le $final_amount ))
 then
@@ -29,4 +28,4 @@ elif (( $x -eq $final_amount ))
 then
 echo "Maximum value of 200 is reached"
 fi
-fi
+
